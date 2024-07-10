@@ -4,6 +4,7 @@
     background: var(--c-background);
   }
   &-content1 {
+    position: relative;
     padding: 15px 0;
     display: flex;
     align-items: center;
@@ -21,14 +22,22 @@
     &__desc {
       font: var(--txt-400-14-100-ff);
       color: var(--c-text-white);
+      @include mobile-small {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 9px;
+        color: var(--c-text-white);
+      }
     }
   }
-
   &-center {
     margin-left: auto;
     display: flex;
     align-items: center;
     column-gap: 40px;
+    @include tablet {
+      display: none;
+    }
   }
   &-item {
     display: flex;
@@ -43,7 +52,6 @@
       color: var(--c-text-white);
     }
   }
-
   &-icons {
     display: flex;
     column-gap: 31px;
@@ -52,32 +60,61 @@
       &:hover {
         opacity: 0.7;
         scale: 1.2;
+        transform: rotate(360deg);
       }
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &-hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include tablet {
+      display: block;
     }
   }
 
   // header-bottom
   &-bottom {
     background: var(--c-text-white);
+    box-shadow: 1px 2px 2px -1px rgba(48, 44, 44, 0.18);
   }
   &-content2 {
     padding: 25px 0 14px;
     @include flex-spaceBetween-center;
     column-gap: 25px;
+    @include desktop-small {
+      column-gap: 20px;
+    }
   }
   &-logo {
+    flex-shrink: 0;
     transition: var(--transition);
     &:hover {
       opacity: 0.7;
     }
+    @include mobile-small {
+      width: 130px;
+    }
   }
   &-nav {
+    @include tablet {
+      display: none;
+    }
     &__list {
       display: flex;
       column-gap: 39px;
+      @include desktop-small {
+        column-gap: 20px;
+      }
     }
     &__link {
-      font:var(--txt-400-18-100-ff);
+      font: var(--txt-400-18-100-ff);
       color: var(--c-color-link);
       white-space: nowrap;
       transition: var(--transition);
@@ -93,7 +130,7 @@
     background: var(--c-background-btn);
 
     display: inline-block;
-    font:var(--txt-400-14-100-ff);
+    font: var(--txt-400-14-100-ff);
     color: var(--c-text-white);
     white-space: nowrap;
 
@@ -101,6 +138,89 @@
     &:hover {
       opacity: 0.7;
       background: var(--c-background);
+    }
+    @include desktop-small {
+      padding: 12px 20px;
+    }
+    @include mobile-small {
+      padding: 9px 15px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 9px;
+      color: var(--c-text-white);
+    }
+  }
+
+  // mobile-mumu
+  &-mobile {
+    box-shadow: -2px 4px 4px 3px rgba(49, 46, 46, 0.09);
+    background: var(--c-background-menu);
+    padding: 16px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(110%);
+    transition: var(--transition-2);
+  }
+  &-mobile.is-active {
+    transform: none;
+  }
+  &-menu {
+    position: relative;
+    @include flex-spaceBetween-center;
+    column-gap: 20px;
+    padding-bottom: 15px;
+    &::after {
+      content: "";
+      height: 1px;
+      width: calc(100% + 40px);
+      background-color: rgba(217, 214, 214, 0.56);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+    }
+    &__title {
+      font: var(--txt-400-22-100-ff);
+      color: var(--c-text-white);
+    }
+  }
+  &-body {
+    padding: 31px 0 48px;
+    &__desc {
+      @include flex-center-center;
+      column-gap: 11px;
+      margin-bottom: 25px;
+      span {
+        font: var(--txt-400-16-100-ff);
+        color: var(--c-text-white);
+      }
+    }
+    &__social {
+      @include flex-center-center;
+      column-gap: 31px;
+      padding: 7px 0 49px;
+      &-icon {
+        transition: var(--transition);
+        &:hover {
+          opacity: 0.7;
+          scale: 1.2;
+          transform: rotate(360deg);
+        }
+      }
+    }
+    &__navigation {
+      text-align: center;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 34px;
+    }
+    &__link {
+      font: var(--txt-400-18-100-ff);
+      color: var(--c-text-white);
     }
   }
 }

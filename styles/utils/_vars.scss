@@ -2,7 +2,9 @@
   --html-fs: 1px;
   --ff: "Source Sans 3", sans-serif;
   --transition: 0.2s all ease-in-out;
+  --transition-2: 0.5s ease;
 
+  --txt-400-22-100-ff: normal 400 22px / 100% var(--ff);
   --txt-400-18-100-ff: normal 400 18px / 100% var(--ff);
   --txt-400-16-100-ff: normal 400 16px / 100% var(--ff);
   --txt-400-14-100-ff: normal 400 14px / 100% var(--ff);
@@ -10,5 +12,6 @@
   --c-text-white: #fff;
   --c-color-link: #302d2d;
   --c-background: #2378c9;
+  --c-background-menu: #0e6eaa;
   --c-background-btn: #f86d6d;
 }
