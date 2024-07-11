@@ -160,11 +160,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateX(110%);
+    transform: translateY(-110%);
     transition: var(--transition-2);
+    z-index: 2;
   }
   &-mobile.is-active {
     transform: none;
+
   }
   &-menu {
     position: relative;

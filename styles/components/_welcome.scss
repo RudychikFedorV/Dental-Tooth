@@ -1,0 +1,109 @@
+.welcome {
+  background: var(--c-background-menu);
+  position: relative;
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 40px;
+    @include tablet-small {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  &-left {
+    max-width: 485px;
+    &__desc {
+      position: relative;
+      font: var(--txt-400-14-100-ff);
+      color: var(--c-color-desc);
+      margin-bottom: 11px;
+      @include mobile-small {
+        font: var(--txt-400-12-100-ff);
+      }
+      &::before {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        left: calc(-100% - 16px);
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--c-color-desc);
+        @include tablet-small {
+          display: none;
+        }
+      }
+    }
+    &__title {
+      font: var(--txt-700-62-100-ff);
+      color: var(--c-text-white);
+      margin-bottom: 21px;
+      @include tablet {
+        font: var(--txt-700-42-100-ff);
+      }
+      @include mobile-small {
+        font: var(--txt-700-32-100-ff);
+      }
+    }
+    &__txt {
+      font: var(--txt-400-18-100-ff);
+      color: var(--c-text-white);
+      margin-bottom: 26px;
+      @include mobile-small {
+        font: var(--txt-400-14-100-ff);
+      }
+    }
+    &__btn {
+      display: inline-block;
+      padding: 18px 43px;
+      border-radius: 29px;
+      background: var(--c-background-btn2);
+
+      font: var(--txt-400-18-100-ff);
+      white-space: nowrap;
+      text-align: center;
+      color: var(--c-text-white);
+      transition: var(--transition);
+      &:hover {
+        opacity: 0.9;
+        background: var(--c-background-btn);
+        color: var(--c-color-link);
+      }
+      @include mobile {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+    }
+  }
+  &-right {
+    max-width: 567px;
+    margin-right: 155px;
+    position: relative;
+    @include mobile {
+      padding-bottom: 35px;
+      margin-top: -54px;
+      margin-right: 100px;
+    }
+    @include mobile-small {
+      margin-right: 80px;
+    }
+    &__logo {
+      position: absolute;
+      top: 175px;
+      right: -90px;
+      @include mobile {
+        width: 205px;
+        top: 140px;
+      }
+      @include mobile-small {
+        top: 80px;
+      }
+    }
+  }
+}
