@@ -13,6 +13,7 @@
   --txt-400-52-100-ff: normal 400 52px / 100% var(--ff);
   --txt-400-30-100-ff: normal 400 30px / 100% var(--ff);
   --txt-400-24-100-ff: normal 400 24px / 100% var(--ff);
+  --txt-400-23-100-ff: normal 400 23px / 100% var(--ff);
   --txt-400-22-100-ff: normal 400 22px / 100% var(--ff);
   --txt-400-20-100-ff: normal 400 20px / 100% var(--ff);
   --txt-400-18-175-ff: normal 400 18px / 175% var(--ff);
@@ -23,8 +24,11 @@
   --txt-400-14-100-ff: normal 400 14px / 100% var(--ff);
   --txt-400-12-100-ff: normal 400 12px / 100% var(--ff);
   --txt-400-7-100-ff: normal 400 7px / 100% var(--ff);
+  --txt-300-18-100-ff: normal 300 18px / 100% var(--ff);
   --txt-300-16-160-ff: normal 300 16px / 160% var(--ff);
+  --txt-300-16-100-ff: normal 300 16px / 100% var(--ff);
   --txt-300-14-160-ff: normal 300 14px / 160% var(--ff);
+  --txt-300-7-100-ff: normal 300 7px / 100% var(--ff);
 
   --c-text-white: #fff;
   --c-text-black: #000;
@@ -38,4 +42,9 @@
   --c-background-btn2: #5eb8f0;
   --c-background-features: #dfeefc;
   --c-box-shadow-1: 0 0 8px -1px rgba(29, 28, 28, 0.28);
+  --c-background-prices: linear-gradient(
+    222deg,
+    #dfeefc 0%,
+    rgba(167, 210, 251, 0.92) 100%
+  );
 }
