@@ -4,10 +4,12 @@
   --transition: 0.2s all ease-in-out;
   --transition-2: 0.5s ease;
 
-  --txt-700-62-100-ff: normal 700 62px / 106% var(--ff);
-  --txt-700-52-100-ff: normal 700 52px / 106% var(--ff);
-  --txt-700-42-100-ff: normal 700 42px / 106% var(--ff);
-  --txt-700-32-100-ff: normal 700 32px / 106% var(--ff);
+  --txt-700-62-100-ff: normal 700 62px / 100% var(--ff);
+  --txt-700-52-100-ff: normal 700 52px / 100% var(--ff);
+  --txt-700-42-100-ff: normal 700 42px / 100% var(--ff);
+  --txt-700-32-100-ff: normal 700 32px / 100% var(--ff);
+  --txt-700-18-100-ff: normal 700 18px / 100% var(--ff);
+  --txt-700-9-100-ff: normal 700 9px / 100% var(--ff);
   --txt-400-52-100-ff: normal 400 52px / 100% var(--ff);
   --txt-400-30-100-ff: normal 400 30px / 100% var(--ff);
   --txt-400-24-100-ff: normal 400 24px / 100% var(--ff);
@@ -20,6 +22,9 @@
   --txt-400-14-175-ff: normal 400 14px / 175% var(--ff);
   --txt-400-14-100-ff: normal 400 14px / 100% var(--ff);
   --txt-400-12-100-ff: normal 400 12px / 100% var(--ff);
+  --txt-400-7-100-ff: normal 400 7px / 100% var(--ff);
+  --txt-300-16-160-ff: normal 300 16px / 160% var(--ff);
+  --txt-300-14-160-ff: normal 300 14px / 160% var(--ff);
 
   --c-text-white: #fff;
   --c-text-black: #000;
@@ -32,4 +37,5 @@
   --c-background-btn: #f86d6d;
   --c-background-btn2: #5eb8f0;
   --c-background-features: #dfeefc;
+  --c-box-shadow-1: 0 0 8px -1px rgba(29, 28, 28, 0.28);
 }
