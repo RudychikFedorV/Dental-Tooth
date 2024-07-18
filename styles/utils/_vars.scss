@@ -13,6 +13,7 @@
   --txt-700-15-175-ff: normal 700 15px / 175% var(--ff);
   --txt-700-14-100-ff: normal 700 14px / 100% var(--ff);
   --txt-700-9-100-ff: normal 700 9px / 100% var(--ff);
+  --txt-600-24-100-ff: normal 600 24px / 100% var(--ff);
   --txt-400-52-100-ff: normal 400 52px / 100% var(--ff);
   --txt-400-40-100-ff: normal 400 40px / 100% var(--ff);
   --txt-400-32-100-ff: normal 400 32px / 100% var(--ff);
@@ -47,8 +48,11 @@
   --c-color-desc-4: #e4e4e4;
   --c-color-desc-5: #b9b9b9;
   --c-color-desc-6: #747474;
+  --c-color-desc-7: #e0e0e0;
+  --c-color-desc-8: #c3c3c3;
   --c-color-data-news: #a9a9a9;
   --c-background: #2378c9;
+  --c-background-footer: #10406f;
   --c-background-btn-news: #5eb8f0;
   --c-background-menu: #0e6eaa;
   --c-background-btn: #f86d6d;
@@ -65,4 +69,5 @@
     #dfeefc 0%,
     rgba(167, 210, 251, 0.92) 100%
   );
+  --c-border-right: 1px solid rgba(180, 180, 180, 0.35);
 }

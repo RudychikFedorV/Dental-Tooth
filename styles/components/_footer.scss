@@ -1,0 +1,95 @@
+.footer {
+  background: var(--c-background-footer);
+  &-content {
+    display: flex;
+    column-gap: 100px;
+    @include tablet-small {
+      flex-direction: column-reverse;
+      align-items: center;
+      column-gap: 0px;
+      text-align: center;
+    }
+  }
+  &-left {
+    padding: 65px 0;
+    border-right: var(-c-border-right);
+    padding-right: 100px;
+    @include tablet-small {
+      border-right: none;
+      padding: 0;
+    }
+    &__img {
+      display: inline-block;
+      margin-bottom: 80px;
+      @include tablet-small {
+        margin-bottom: 50px;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      margin-bottom: 24px;
+      transition: var(--transition);
+      &:hover {
+        opacity: 0.7;
+      }
+      @include tablet-small {
+        justify-content: center;
+      }
+      &-desc {
+        font: var(--txt-400-14-100-ff);
+        color: var(--c-text-white);
+      }
+    }
+    &__icons {
+      display: flex;
+      column-gap: 31px;
+      @include tablet-small {
+        margin-bottom: 31px;
+        justify-content: center;
+      }
+      &-icon{
+        transition: var(--transition);
+      &:hover {
+        opacity: 0.7;
+        scale: 1.2;
+        transform: rotate(360deg);
+      }
+      }
+    }
+  }
+  &-right {
+    padding: 65px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px 20px;
+    width: 100%;
+    @include tablet-small {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: inherit;
+    }
+  }
+  &-services {
+    max-width: 240px;
+    &__title {
+      font: var(--txt-600-24-100-ff);
+      color: var(--c-text-white);
+      margin-bottom: 21px;
+    }
+    &__desc {
+      font: var(--txt-400-16-100-ff);
+      color: var(--c-color-desc-7);
+      margin-bottom: 15px;
+    }
+  }
+  &-bottom {
+    border-top: var(--c-border-right);
+    padding: 37px 0;
+    text-align: center;
+    font: var(--txt-300-16-100-ff);
+    color: var(--c-color-desc-8);
+  }
+}

@@ -16,4 +16,5 @@ $(document).ready(function () {
     },
   });
   // Swiper end
+  document.getElementById("copyright").textContent = new Date().getFullYear();
 });
