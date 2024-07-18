@@ -1,11 +1,14 @@
 html {
   font-size: var(--html-fs);
 }
+html, body{
+  overflow-x: hidden;
+}
 body {
   font-size: 16px;
   font-family: var(--ff);
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  position: relative;
 }
 .container {
   max-width: 1240px;

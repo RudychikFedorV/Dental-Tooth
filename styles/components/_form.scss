@@ -1,0 +1,85 @@
+.form {
+  background: var(--c-background-prices);
+  &-content {
+    @include flex-spaceBetween-center;
+    gap: 20px;
+    @include tablet {
+      padding: 50px 25px 70px;
+      justify-content: center;
+    }
+    @include mobile-small {
+      padding: 50px 0px;
+    }
+  }
+  &-left {
+    text-align: center;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    padding: 55px 50px;
+    box-shadow: var(--c-box-shadow-2);
+    background: var(--c-text-white);
+    border-radius: 20px;
+    @include tablet {
+      padding: 25px 20px;
+    }
+    @include mobile-small {
+      padding: 15px 10px;
+    }
+    &__title {
+      font: var(--txt-400-32-100-ff);
+      color: var(--c-color-link);
+      margin-bottom: 30px;
+      @include mobile-small {
+        font: var(--txt-400-23-100-ff);
+      }
+    }
+    .form-input {
+      font: var(--txt-400-18-100-ff);
+      color: var(--c-color-link);
+      padding: 20px;
+      border: 1px solid var(--c-color-desc-4);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      &::placeholder {
+        color: var(--c-color-desc-5);
+      }
+      @include mobile-small {
+        font: var(--txt-400-13-100-ff);
+        padding: 13px 16px;
+      }
+    }
+    &__btn {
+      display: inline-block;
+      font: var(--txt-400-18-100-ff);
+      color: var(--c-text-white);
+
+      padding: 18px;
+      background: var(--c-background-btn2);
+      border-radius: 29px;
+      margin-bottom: 20px;
+      transition: var(--transition);
+      &:hover {
+        opacity: 0.8;
+        scale: 1.01;
+        background: var(--c-background-btn);
+      }
+      @include mobile-small {
+        font: var(--txt-400-13-100-ff);
+        padding: 13px;
+      }
+    }
+    &__desc {
+      font: var(--txt-300-14-100-ff);
+      color: var(--c-color-desc-6);
+    }
+  }
+  &-right {
+    flex-shrink: 0;
+    width: 50%;
+    @include tablet-small {
+      display: none;
+    }
+  }
+}

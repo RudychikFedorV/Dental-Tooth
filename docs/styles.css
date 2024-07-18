@@ -162,6 +162,7 @@ p {
   --txt-700-9-100-ff: normal 700 9px / 100% var(--ff);
   --txt-400-52-100-ff: normal 400 52px / 100% var(--ff);
   --txt-400-40-100-ff: normal 400 40px / 100% var(--ff);
+  --txt-400-32-100-ff: normal 400 32px / 100% var(--ff);
   --txt-400-30-100-ff: normal 400 30px / 100% var(--ff);
   --txt-400-24-100-ff: normal 400 24px / 100% var(--ff);
   --txt-400-23-100-ff: normal 400 23px / 100% var(--ff);
@@ -173,6 +174,7 @@ p {
   --txt-400-16-100-ff: normal 400 16px / 100% var(--ff);
   --txt-400-14-175-ff: normal 400 14px / 175% var(--ff);
   --txt-400-14-100-ff: normal 400 14px / 100% var(--ff);
+  --txt-400-13-100-ff: normal 400 13px / 100% var(--ff);
   --txt-400-12-100-ff: normal 400 12px / 100% var(--ff);
   --txt-400-9-175-ff: normal 400 9px / 175% var(--ff);
   --txt-400-7-100-ff: normal 400 7px / 100% var(--ff);
@@ -180,6 +182,7 @@ p {
   --txt-300-16-160-ff: normal 300 16px / 160% var(--ff);
   --txt-300-16-100-ff: normal 300 16px / 100% var(--ff);
   --txt-300-14-160-ff: normal 300 14px / 160% var(--ff);
+  --txt-300-14-100-ff: normal 300 14px / 100% var(--ff);
   --txt-300-7-100-ff: normal 300 7px / 100% var(--ff);
   --c-text-white: #fff;
   --c-text-black: #000;
@@ -187,6 +190,9 @@ p {
   --c-color-desc: #c5c1fe;
   --c-color-desc-2: #6b6868;
   --c-color-desc-3: #56565e;
+  --c-color-desc-4: #e4e4e4;
+  --c-color-desc-5: #b9b9b9;
+  --c-color-desc-6: #747474;
   --c-color-data-news: #a9a9a9;
   --c-background: #2378c9;
   --c-background-btn-news: #5eb8f0;
@@ -199,6 +205,7 @@ p {
   --c-background-slide: rgba(255, 255, 255, 0.9);
   --c-background-img-news: rgba(46, 45, 45, 0.1);
   --c-box-shadow-1: 0 0 8px -1px rgba(29, 28, 28, 0.28);
+  --c-box-shadow-2: 0 0 8px 2px rgba(108, 108, 108, 0.25);
   --c-background-prices: linear-gradient(
     222deg,
     #dfeefc 0%,
@@ -210,11 +217,15 @@ html {
   font-size: var(--html-fs);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 16px;
   font-family: var(--ff);
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -1352,6 +1363,109 @@ body {
     max-width: 20px;
     height: 20px;
     padding: 4px;
+  }
+}
+
+.form {
+  background: var(--c-background-prices);
+}
+.form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .form-content {
+    padding: 50px 25px 70px;
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .form-content {
+    padding: 50px 0px;
+  }
+}
+.form-left {
+  text-align: center;
+  max-width: 425px;
+  display: flex;
+  flex-direction: column;
+  padding: 55px 50px;
+  box-shadow: var(--c-box-shadow-2);
+  background: var(--c-text-white);
+  border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .form-left {
+    padding: 25px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .form-left {
+    padding: 15px 10px;
+  }
+}
+.form-left__title {
+  font: var(--txt-400-32-100-ff);
+  color: var(--c-color-link);
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .form-left__title {
+    font: var(--txt-400-23-100-ff);
+  }
+}
+.form-left .form-input {
+  font: var(--txt-400-18-100-ff);
+  color: var(--c-color-link);
+  padding: 20px;
+  border: 1px solid var(--c-color-desc-4);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.form-left .form-input::placeholder {
+  color: var(--c-color-desc-5);
+}
+@media (max-width: 480px) {
+  .form-left .form-input {
+    font: var(--txt-400-13-100-ff);
+    padding: 13px 16px;
+  }
+}
+.form-left__btn {
+  display: inline-block;
+  font: var(--txt-400-18-100-ff);
+  color: var(--c-text-white);
+  padding: 18px;
+  background: var(--c-background-btn2);
+  border-radius: 29px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+.form-left__btn:hover {
+  opacity: 0.8;
+  scale: 1.01;
+  background: var(--c-background-btn);
+}
+@media (max-width: 480px) {
+  .form-left__btn {
+    font: var(--txt-400-13-100-ff);
+    padding: 13px;
+  }
+}
+.form-left__desc {
+  font: var(--txt-300-14-100-ff);
+  color: var(--c-color-desc-6);
+}
+.form-right {
+  flex-shrink: 0;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .form-right {
+    display: none;
   }
 }
 
