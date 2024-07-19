@@ -1,0 +1,48 @@
+.breadcrumbs {
+  background: var(--c-background-features);
+  padding: 25px 0;
+  text-align: center;
+
+  &-ul {
+    @include flex-center-center;
+  }
+  &-li {
+    display: flex;
+    &:nth-last-child(n + 2) {
+      margin-right: 10px;
+    }
+  }
+  &-a {
+    display: flex;
+    align-items: center;
+    font: var(--txt-400-18-100-ff);
+    color: var(--c-color-link);
+    svg {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+.s-blog {
+  padding: 50px 0;
+  @include mobile-small {
+    padding: 24px 0;
+  }
+
+  &-content {
+    overflow-x: hidden;
+    grid-auto-flow: inherit;
+
+    @include tablet-small {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  &-item {
+    min-width: auto;
+  }
+}
