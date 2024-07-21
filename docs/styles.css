@@ -157,9 +157,11 @@ p {
   --txt-700-32-100-ff: normal 700 32px / 100% var(--ff);
   --txt-700-30-175-ff: normal 700 30px / 175% var(--ff);
   --txt-700-24-100-ff: normal 700 24px / 100% var(--ff);
+  --txt-700-22-180-ff: normal 700 22px / 180% var(--ff);
   --txt-700-18-180-ff: normal 700 18px / 180% var(--ff);
   --txt-700-18-100-ff: normal 700 18px / 100% var(--ff);
   --txt-700-15-175-ff: normal 700 15px / 175% var(--ff);
+  --txt-700-14-180-ff: normal 700 14px / 180% var(--ff);
   --txt-700-14-100-ff: normal 700 14px / 100% var(--ff);
   --txt-700-12-100-ff: normal 700 12px / 100% var(--ff);
   --txt-700-9-100-ff: normal 700 9px / 100% var(--ff);
@@ -184,6 +186,7 @@ p {
   --txt-400-14-100-ff: normal 400 14px / 100% var(--ff);
   --txt-400-13-100-ff: normal 400 13px / 100% var(--ff);
   --txt-400-12-100-ff: normal 400 12px / 100% var(--ff);
+  --txt-400-11-180-ff: normal 400 11px / 180% var(--ff);
   --txt-400-9-175-ff: normal 400 9px / 175% var(--ff);
   --txt-400-9-100-ff: normal 400 9px / 100% var(--ff);
   --txt-400-7-100-ff: normal 400 7px / 100% var(--ff);
@@ -220,6 +223,7 @@ p {
   --c-background-img-news: rgba(46, 45, 45, 0.1);
   --c-box-shadow-1: 0 0 8px -1px rgba(29, 28, 28, 0.28);
   --c-box-shadow-2: 0 0 8px 2px rgba(108, 108, 108, 0.25);
+  --c-box-shadow-3: -1px 1px 11px 3px rgba(46, 44, 44, 0.21);
   --c-background-prices: linear-gradient(
     222deg,
     #dfeefc 0%,
@@ -2103,6 +2107,112 @@ body {
 .contact .single-row {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.dentist {
+  padding-top: 60px;
+}
+@media (max-width: 576px) {
+  .dentist {
+    padding-top: 40px;
+  }
+}
+.dentist-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 992px) {
+  .dentist-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.dentist-left {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: var(--c-box-shadow-3);
+}
+.dentist-left img:nth-child(2) {
+  display: none;
+}
+@media (max-width: 992px) {
+  .dentist-left img:nth-child(1) {
+    display: none;
+  }
+  .dentist-left img:nth-child(2) {
+    display: block;
+  }
+}
+.dentist-right__title {
+  font: var(--txt-400-52-100-ff);
+  color: var(--c-color-link);
+}
+@media (max-width: 576px) {
+  .dentist-right__title {
+    font: var(--txt-400-32-100-ff);
+  }
+}
+.dentist-right__desc {
+  padding-top: 30px;
+  font: var(--txt-700-22-180-ff);
+  color: var(--c-color-desc-3);
+  margin-bottom: 15px;
+}
+@media (max-width: 576px) {
+  .dentist-right__desc {
+    font: var(--txt-700-14-180-ff);
+  }
+}
+.dentist-right__info {
+  font: var(--txt-400-18-180-ff);
+  color: var(--c-color-desc-3);
+}
+@media (max-width: 576px) {
+  .dentist-right__info {
+    font: var(--txt-400-11-180-ff);
+  }
+}
+.dentist-right__info::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: var(--c-background-btn-news);
+  margin-right: 10px;
+}
+.dentist-right__schedule {
+  font: var(--txt-400-18-180-ff);
+  color: var(--c-color-desc-3);
+}
+@media (max-width: 576px) {
+  .dentist-right__schedule {
+    font: var(--txt-400-11-180-ff);
+  }
+}
+
+.dentist-contacts {
+  justify-content: center;
+  margin-bottom: 60px;
+}
+@media (max-width: 576px) {
+  .dentist-contacts {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .dentist-item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .dentist-item:nth-child(3) {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
