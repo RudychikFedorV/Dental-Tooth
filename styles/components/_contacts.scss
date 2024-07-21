@@ -1,0 +1,132 @@
+.contacts {
+  padding-top: 60px;
+  @include mobile {
+    padding-top: 25px;
+  }
+  &-title {
+    font: var(--txt-400-52-100-ff);
+    color: var(--c-color-link);
+    text-align: center;
+    margin-bottom: 50px;
+    @include mobile {
+      font: var(--txt-400-32-100-ff);
+      margin-bottom: 25px;
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include tablet-small {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+    @include mobile {
+      gap: 15px;
+    }
+  }
+  &-item {
+    text-align: center;
+    border-radius: 5px;
+    background: var(--c-background-btn-news);
+    padding: 50px 30px;
+    max-width: 284px;
+    width: 100%;
+    transition: var(--transition);
+    &:nth-child(2n){
+        background: var(--c-background-item);
+    }
+    &:hover {
+      scale: 1.02;
+      opacity: 0.8;
+    }
+    @include tablet-small{
+        max-width: inherit;
+    }
+    @include mobile {
+      padding: 30px 15px;
+    }
+    &:nth-child(1) img {
+      @include mobile {
+        width: 24px;
+        height: 30px;
+      }
+    }
+    &:nth-child(2) img {
+      @include mobile {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &:nth-child(3) img {
+      @include mobile {
+        width: 24px;
+        height: 19px;
+      }
+    }
+    &:nth-child(3) img {
+      @include mobile {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &__title {
+      font: var(--txt-700-24-100-ff);
+      color: var(--c-text-white);
+      margin: 22px 0 12px;
+      @include mobile {
+        font: var(--txt-700-12-100-ff);
+        margin: 10px 0 5px;
+      }
+    }
+    &__desc {
+      font: var(--txt-400-18-100-ff);
+      color: var(--c-text-white);
+      @include mobile {
+        font: var(--txt-400-9-100-ff);
+      }
+    }
+    &__icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      @include mobile {
+        gap: 15px;
+      }
+      &-icon {
+        transition: var(--transition);
+        &:hover {
+          opacity: 0.7;
+          scale: 1.2;
+          transform: rotate(360deg);
+        }
+        @include mobile {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+.contact {
+  padding: 60px 10px 0;
+  &-title {
+    text-align: center;
+  }
+  &-row {
+    display: flex;
+    justify-content: center;
+    &__form-submit {
+      max-width: inherit;
+    }
+  }
+  .single-row {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
