@@ -14,7 +14,25 @@ $(document).ready(function () {
       nextEl: ".reviews-swiper .arrow-next",
       prevEl: ".reviews-swiper .arrow-prev",
     },
+    speed: 1000,
   });
   // Swiper end
+
+  // modal window
+  $(".header-button").magnificPopup({
+    type: "inline",
+    showCloseBtn: false,
+  });
+  $(".header-button").magnificPopup({
+    type: "inline",
+    showCloseBtn: false,
+    removalDelay: 700,
+    callbacks: {
+      beforeOpen: function () {
+        this.st.mainClass = this.st.el.attr("data-effect");
+      },
+    },
+  });
+
   document.getElementById("copyright").textContent = new Date().getFullYear();
 });

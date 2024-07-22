@@ -24,6 +24,7 @@
   --txt-400-40-100-ff: normal 400 40px / 100% var(--ff);
   --txt-400-32-100-ff: normal 400 32px / 100% var(--ff);
   --txt-400-30-100-ff: normal 400 30px / 100% var(--ff);
+  --txt-400-26-100-ff: normal 400 26px / 100% var(--ff);
   --txt-400-24-100-ff: normal 400 24px / 100% var(--ff);
   --txt-400-23-100-ff: normal 400 23px / 100% var(--ff);
   --txt-400-22-100-ff: normal 400 22px / 100% var(--ff);
@@ -96,7 +97,9 @@
     #dfeefc 0%,
     rgba(167, 210, 251, 0.92) 100%
   );
+  --c-background-mfp: rgba(48, 45, 45, 0.45);
   --c-background-line: #e2dfdf;
   --c-border-right: 1px solid rgba(180, 180, 180, 0.35);
   --c-border-bottom: 1px solid #ececec;
+  --c-border-bottom-modal: 1px solid #f0f0f0;
 }

@@ -8,12 +8,40 @@
     <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
     <link rel="icon" sizes="180x180" href="./img/favicons/icon.png">
     <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="./docs/styles.css">
     <title>Dental Tooth - Blog</title>
 </head>
 
 <body>
+     <!-- modal window -->
+     <section class="callback-popup mfp-hide mfp-with-anim" id="callback-popup">
+        <div class="callback-header">
+            <img src="./img/header-bottom/header-logo.png" alt="logo">
+            <button type="button" class="mfp-close">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.977032 19.0005C0.72675 19.0005 0.476467 18.9053 0.28631 18.7137C-0.0954366 18.3319 -0.0954366 17.713 0.28631 17.3313L17.3313 0.28631C17.713 -0.0954366 18.3319 -0.0954366 18.7137 0.28631C19.0954 0.668056 19.0954 1.28696 18.7137 1.66895L1.66895 18.7137C1.47736 18.9041 1.22708 19.0005 0.977032 19.0005Z"
+                        fill="#F0DFDF" />
+                    <path
+                        d="M18.0232 19.0005C17.7729 19.0005 17.5229 18.9053 17.3325 18.7137L0.28631 1.66895C-0.0954366 1.28696 -0.0954366 0.668056 0.28631 0.28631C0.668056 -0.0954366 1.28696 -0.0954366 1.66895 0.28631L18.7137 17.3313C19.0954 17.713 19.0954 18.3319 18.7137 18.7137C18.5221 18.9041 18.2721 19.0005 18.0232 19.0005Z"
+                        fill="#F0DFDF" />
+                </svg>
+            </button>
+        </div>
+        <div class="callback-form" aria-label="callback form">
+            <h1 class="callback-form__title">Получить консультацию</h1>
+            <form action="/" class="callback-form__form" aria-label="form input">
+                <input class="callback-form__text form-input" type="text" placeholder="Ваше имя">
+                <input class="callback-form__tel form-input" type="tel" placeholder="Ваш телефон">
+            </form>
+            <a href="#!" class="callback-form__btn">Отправить</a>
+            <p class="callback-form__desc">Нажимая кнопку, я даю свое согласие на обработку моих
+                персональных данных
+            </p>
+        </div>
+
+    </section>
+
     <header class="header" aria-label="header section">
         <!-- header-top -->
         <div class="header-top" aria-label="header top block">
@@ -64,15 +92,18 @@
                     </a>
                     <nav class="header-nav" aria-label="header navigation">
                         <ul class="header-nav__list">
-                            <li class="header-nav__item"><a class="header-nav__link" href="./index.html">Главная</a></li>
+                            <li class="header-nav__item"><a class="header-nav__link" href="./index.html">Главная</a>
+                            </li>
                             <li class="header-nav__item"><a class="header-nav__link" href="#!">Услуги</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="./specialists.html">Наши специалисты</a></li>
+                            <li class="header-nav__item"><a class="header-nav__link" href="./specialists.html">Наши
+                                    специалисты</a></li>
                             <li class="header-nav__item"><a class="header-nav__link" href="#!">Отзывы</a></li>
                             <li class="header-nav__item"><a class="header-nav__link" href="./blog.html">Блог</a></li>
-                            <li class="header-nav__item"><a class="header-nav__link" href="./contacts.html">Контакты</a></li>
+                            <li class="header-nav__item"><a class="header-nav__link" href="./contacts.html">Контакты</a>
+                            </li>
                         </ul>
                     </nav>
-                    <a href="#!" class="header-button" aria-label="header button">Получить консультацию</a>
+                    <a href="#callback-popup" class="header-button" data-effect="mfp-3d-unfold" aria-label="header button">Получить консультацию</a>
                 </div>
 
             </div>
@@ -111,10 +142,12 @@
                     <ul class="header-body__list">
                         <li class="header-body__item"><a href="./index.html" class="header-body__link">Главная</a></li>
                         <li class="header-body__item"><a href="#!" class="header-body__link">Услуги</a></li>
-                        <li class="header-body__item"><a href="./specialists.html" class="header-body__link">Наши специалисты</a></li>
+                        <li class="header-body__item"><a href="./specialists.html" class="header-body__link">Наши
+                                специалисты</a></li>
                         <li class="header-body__item"><a href="#!" class="header-body__link">Отзывы</a></li>
                         <li class="header-body__item"><a href="./blog.html" class="header-body__link">Блог</a></li>
-                        <li class="header-body__item"><a href="./contacts.html" class="header-body__link">Контакты</a></li>
+                        <li class="header-body__item"><a href="./contacts.html" class="header-body__link">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -401,6 +434,7 @@
 
     <script src="./js/jquery-3.6.4.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
