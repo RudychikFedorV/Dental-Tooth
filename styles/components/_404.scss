@@ -1,0 +1,49 @@
+.not-found {
+  padding-top: 60px;
+  background: var(--c-background-prices);
+  &-content {
+    position: relative;
+    text-align: center;
+    &__block {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      max-width: 663px;
+      width: 100%;
+      text-align: center;
+      padding: 41px;
+      border-radius: 50px 50px 0 0;
+      box-shadow: var(--c-box-shadow-4);
+      background: var(--c-background-404);
+      @include mobile-small {
+        padding: 25px;
+        border-radius: 25px 25px 0 0;
+      }
+      &-title {
+        font: var(--txt-700-32-100-ff);
+        color: var(--c-color-link);
+        margin-bottom: 15px;
+        @include mobile-small {
+          font-size: 22px;
+        }
+      }
+      &-desc {
+        font: var(--txt-400-24-100-ff);
+        color: var(--c-color-link);
+        @include mobile-small {
+          font: var(--txt-400-16-100-ff);
+        }
+        a {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          font: var(--txt-400-24-100-ff);
+          color: var(--c-color-link);
+          @include mobile-small {
+            font: var(--txt-400-16-100-ff);
+          }
+        }
+      }
+    }
+  }
+}
